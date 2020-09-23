@@ -1,13 +1,13 @@
 //import { connect } from './client.js';
 const { connect } = require('./client');
-const { setupInput } = require('./input');
+const { setupInput} = require('./input');
 const net = require('net');
 
 
 console.log('Connecting ...');
-connect();
-setupInput();
-
+//console.log(connection);
+//connect();
+setupInput(connect());
 
 /**
  * Setup User Interface 
