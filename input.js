@@ -56,16 +56,18 @@ const handleUserInput = function(){
       connection.write("Move: right");
     } 
   });
-  return stdin;
+
+  stdin.on('data', (key) => {
+    if (key === '\u006C') {
+      connection.write("Say: yayyyy");
+    } 
+  });
+
+
+
+
 
 }
 
-// connection.on('data', () => {connection.write("Move: up")})
-//connect();
-//conn.on('connect', () => {conn.write("Move: up")});
-// if( key === '\u0077' ){ connection.on('data', () =>  connection.write("Move: up"))
-//     }
 
 module.exports = {setupInput};
-// exports.cn = connection;
-//module.exports = {handleUserInput};
