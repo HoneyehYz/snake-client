@@ -1,17 +1,6 @@
-
-//const { connect } = require('./client');
-//const { connect } = require('./client');
+const { IP, PORT } = require('./constants');
 const { stdin } = require('process');
-// console.log({connect});
-// console.log('++++++++++++++++++');
-// // console.log(connect);
-// console.log('++++++++++++++++++');
-// console.log(connect());
-// console.log('++++++++++++++++++');
-// // console.log(connect.connect());
-// console.log('++++++++++++++++++');
-// console.log(connect[Function]);
-// console.log('++++++++++++++++++');
+
 
 let connection; 
 
@@ -30,7 +19,6 @@ const setupInput = function(conn) {
 
 const handleUserInput = function(){
 
-  //console.log(connection);
   stdin.on('data', (key) => {
     if (key === '\u0003') {
       process.exit();

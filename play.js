@@ -1,13 +1,15 @@
 //import { connect } from './client.js';
+const { IP, PORT } = require('./constants');
 const { connect } = require('./client');
 const { setupInput} = require('./input');
 const net = require('net');
+//const { PORT } = require('./constants');
 
 
 console.log('Connecting ...');
 //console.log(connection);
 //connect();
-setupInput(connect());
+setupInput(connect(IP,PORT));
 
 /**
  * Setup User Interface 
